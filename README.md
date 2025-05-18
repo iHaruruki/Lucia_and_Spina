@@ -7,6 +7,8 @@ List of packages required to run Lucia
 [lucia_description](https://github.com/iHaruruki/lucia_description.git)
 ### urg_node2 (a ROS2 driver node for HOKUYO 2D LiDAR)
 [urg_node2](https://github.com/Hokuyo-aut/urg_node2.git)
+### orbbec astra_pro
+[ros2_astra_camera](https://github.com/orbbec/ros2_astra_camera.git)
 ## SLAM
 ### slam_toolbox
 [lucia_slam_toolbox](https://github.com/iHaruruki/lucia_slam_toolbox.git)
