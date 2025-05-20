@@ -15,7 +15,7 @@ List of packages required to run Lucia
 ### cartographer
 [lucia_cartographer](https://github.com/iHaruruki/lucia_cartographer.git)
 ## Navigation
-[lucia_slam_navigation](https://github.com/iHaruruki/lucia_slam_navigation.git)
+[lucia_navigation2](https://github.com/iHaruruki/lucia_navigation2.git)
 # Spina
 ## arm
 [spina_arm_controll](https://github.com/iHaruruki/spina_arm_controll.git)
