@@ -52,6 +52,25 @@ $ ros2 run spina_arm_controll serial_controller_node
 $ ros2 run lucia_vital vital_controller_node
 $ ros2 run lucia_vital_signs_display vital_signs_display_node
 ```
+#### goal announcement
+```
+ros2 topic pub \
+  /navigate_to_pose/_action/status \
+  action_msgs/msg/GoalStatusArray \
+  "{status_list:
+    [
+      {
+        goal_info:
+          {
+            stamp:    {sec: 0, nanosec: 0},
+            goal_id:  {uuid: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]}
+          },
+        status: 4
+      }
+    ]
+  }" \
+  --once
+```
 ### lucia_vital
 ```
 $ ros2 run lucia_vital vital_controller_node
