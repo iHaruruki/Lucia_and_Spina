@@ -40,17 +40,27 @@ $ ros2 launch lucia_navigation2 navigation2.launch.py map:=$HOME/ros2_ws/src/luc
 ```shell
 $ sudo chmod 777 /dev/ttyUSB0
 $ ros2 run spina_arm_controll serial_controller_node
+```
 #### Set the overall angle to -90°
-$ ros2 topic pub /angle_cmd std_msgs/msg/String "{ data: 'A0p-090' }" --once
+```
+ros2 topic pub /angle_cmd std_msgs/msg/String "{ data: 'A0p-090' }" --once
+```
 #### If you want to control a single module, use "{ data: 'C1p+015' }".
-$ ros2 topic pub /angle_cmd std_msgs/msg/String "{ data: 'C1p-030' }" --once
+```
+ros2 topic pub /angle_cmd std_msgs/msg/String "{ data: 'C1p-030' }" --once
 ```
 ### vLucia_vital_signs_display
 ```
-$ yarpmanager --application /home/robot/repos/robot/script/ymanager/xml/applications/tutorial/tutorial_audio_3.xml
-$ ros2 run spina_arm_controll serial_controller_node
-$ ros2 run lucia_vital vital_controller_node
-$ ros2 run lucia_vital_signs_display vital_signs_display_node
+yarpmanager --application /home/robot/repos/robot/script/ymanager/xml/applications/tutorial/tutorial_audio_3.xml
+```
+```
+ros2 run spina_arm_controll serial_controller_node
+```
+```
+ros2 run lucia_vital vital_controller_node
+```
+```
+ros2 run lucia_vital_signs_display vital_audio_guidance_node 
 ```
 #### goal announcement
 ```
