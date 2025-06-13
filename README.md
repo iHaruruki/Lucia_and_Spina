@@ -28,22 +28,55 @@ List of packages required to run Lucia
 [lucia_vital_signs_display](https://github.com/iHaruruki/lucia_vital_signs_display.git)
 
 # command list
-### lucia_navitaion2
+## SLAM
+### LaunchLucia's motor and LiDAR
+```shell
+ros2 launch lucia_controller bringup.launch.py
 ```
-$ ros2 launch lucia_controller bringup.launch.py
-$ ros2 launch lucia_navigation2 navigation2.launch.py map:=$HOME/ros2_ws/src/lucia_navigation2/map/map.yaml 
+### Run SLAM Nodes
+```shell
+ros2 launch lucia_slam_toolbox online_async_launch.py 
+```
+### Run Teleoperation Node
+```shell
+ros2 run teleop_twist_keyboard teleop_twist_keyboard 
+```
+**Start exploring and drawing the map.**
+### Save Map
+The -f option specifies a folder location and a file name where files to be saved.
+With the above command, map.pgm and map.yaml will be saved in the home folder ~/(/home/${username}).
+```shell
+ros2 run nav2_map_server map_saver_cli -f ~/map
 ```
 
-### spina_arm_controll
+## Navigation
+### LaunchLucia's motor and LiDAR
 ```shell
-$ sudo chmod 777 /dev/ttyUSB0
-$ ros2 run spina_arm_controll serial_controller_node
+ros2 launch lucia_controller bringup.launch.py
 ```
-#### Set the overall angle to -90°
+### Run Navigation Nodes
+```shell
+ros2 launch lucia_navigation2 navigation2.launch.py map:=/homr/<username>/ros2_ws/src/lucia_navigation2/map/map.yaml
+```
+#### Estimate Initia Pose
+1. Click the 2D Pose Estimate button in the RViz2 menu.
+2. Click on the map where the actual robot is located and drag the large green arrow toward the direction where the robot is facing.
+3. Repeat step 1 and 2 until the LDS sensor data is overlayed on the saved map.
+#### Set Navigation Goal
+1. Click the Navigation2 Goal button in the RViz2 menu.
+2. Click on the map to set the destination of the robot and drag the green arrow toward the direction where the robot will be facing.
+## spina_arm_controll
+```shell
+sudo chmod 777 /dev/ttyUSB0
+```
+```shell
+ros2 run spina_arm_controll serial_controller_node
+```
+### Set the overall angle to -90°
 ```
 ros2 topic pub /angle_cmd std_msgs/msg/String "{ data: 'A0p-090' }" --once
 ```
-### Lucia_vital_signs_display
+## Lucia_vital_signs_display
 ```
 yarpmanager --application /home/robot/repos/robot/script/ymanager/xml/applications/tutorial/tutorial_audio_3.xml
 ```
@@ -56,7 +89,7 @@ ros2 run lucia_vital vital_controller_node
 ```
 ros2 run lucia_vital_signs_display vital_audio_guidance_node 
 ```
-#### goal announcement
+### goal announcement
 ```
 ros2 topic pub \
   /navigate_to_pose/_action/status \
