@@ -109,7 +109,3 @@ ros2 topic pub \
   }" \
   --once
 ```
-### lucia_vital
-```
-$ ros2 run lucia_vital vital_controller_node
-```
