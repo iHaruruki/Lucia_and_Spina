@@ -6,7 +6,7 @@ List of packages required to run Lucia
 [lucia_controller](https://github.com/iHaruruki/lucia_controller.git)
 #### Lucia URDF
 [lucia_description](https://github.com/iHaruruki/lucia_description.git)
-#### urg_node2 (a ROS2 driver node for HOKUYO 2D LiDAR)
+#### urg_node2 (A ROS2 driver node for HOKUYO 2D LiDAR)
 [urg_node2](https://github.com/Hokuyo-aut/urg_node2.git)
 #### orbbec astra_pro
 [ros2_astra_camera](https://github.com/orbbec/ros2_astra_camera.git)
@@ -66,6 +66,7 @@ ros2 launch lucia_navigation2 navigation2.launch.py map:=/homr/<username>/ros2_w
 #### Set Navigation Goal
 1. Click the Navigation2 Goal button in the RViz2 menu.
 2. Click on the map to set the destination of the robot and drag the green arrow toward the direction where the robot will be facing.
+
 ## spina_arm_controll
 ```shell
 sudo chmod 777 /dev/ttyUSB0
@@ -73,20 +74,24 @@ sudo chmod 777 /dev/ttyUSB0
 ```shell
 ros2 run spina_arm_controll serial_controller_node
 ```
-### Set the overall angle to -90°
+### Set the overall angle to +90°
 ```
-ros2 topic pub /angle_cmd std_msgs/msg/String "{ data: 'A0p-090' }" --once
+ros2 topic pub /angle_cmd std_msgs/msg/String "{ data: 'A0p+090' }" --once
 ```
 ## Lucia_vital_signs_display
+YARP sound generator
 ```
 yarpmanager --application /home/robot/repos/robot/script/ymanager/xml/applications/tutorial/tutorial_audio_3.xml
 ```
+run arm controller node
 ```
 ros2 run spina_arm_controll serial_controller_node
 ```
+run vital controller node
 ```
 ros2 run lucia_vital vital_controller_node
 ```
+run vital audio guidance node
 ```
 ros2 run lucia_vital_signs_display vital_audio_guidance_node 
 ```
