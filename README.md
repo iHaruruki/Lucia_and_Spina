@@ -42,7 +42,7 @@ ros2 launch lucia_slam_toolbox online_async_launch.py
 ```shell
 ros2 run teleop_twist_keyboard teleop_twist_keyboard 
 ```
-**Start exploring and drawing the map.**
+*Start exploring and drawing the map.*
 ### Save Map
 The -f option specifies a folder location and a file name where files to be saved.
 With the above command, map.pgm and map.yaml will be saved in the home folder ~/(/home/${username}).
