@@ -28,7 +28,7 @@ List of packages required to run Lucia
 #### vital display
 [lucia_vital_signs_display](https://github.com/iHaruruki/lucia_vital_signs_display.git)
 
-# command list
+# Command List
 ## SLAM
 ### LaunchLucia's motor and LiDAR
 ```shell
