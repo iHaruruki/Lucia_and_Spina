@@ -10,6 +10,7 @@ List of packages required to run Lucia
 [urg_node2](https://github.com/Hokuyo-aut/urg_node2.git)
 #### orbbec astra_pro
 [ros2_astra_camera](https://github.com/orbbec/ros2_astra_camera.git)
+[OrbbecSDK_ROS2](https://github.com/orbbec/OrbbecSDK_ROS2.git)
 ### SLAM
 #### slam_toolbox
 [lucia_slam_toolbox](https://github.com/iHaruruki/lucia_slam_toolbox.git)
