@@ -36,7 +36,7 @@ SV1301S_U3
 
 # Command List
 ## SLAM
-### LaunchLucia's motor and LiDAR
+### Launch Lucia's motor and LiDAR
 ```shell
 ros2 launch lucia_controller bringup.launch.py
 ```
