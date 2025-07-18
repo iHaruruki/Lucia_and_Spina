@@ -6,12 +6,15 @@ List of packages required to run Lucia
 [lucia_controller](https://github.com/iHaruruki/lucia_controller.git)
 #### Lucia URDF
 [lucia_description](https://github.com/iHaruruki/lucia_description.git)
-#### urg_node2 (A ROS2 driver node for HOKUYO 2D LiDAR)
-[urg_node2](https://github.com/Hokuyo-aut/urg_node2.git)
+#### LiDAR
+[UTM-30LX-EW](https://www.hokuyo-aut.co.jp/search/single.php?serial=146#program)  
+[ROS2-pkg(urg_node2)](https://github.com/Hokuyo-aut/urg_node2.git)
+#### dual_laser_merger(ROS 2 Package to merge dual lidar scan data)
+[dual_laser_merger](https://github.com/iHaruruki/dual_laser_merger.git)
 #### orbbec
-astra_pro
-[ros2_astra_camera](https://github.com/orbbec/ros2_astra_camera.git)
-SV1301S_U3
+astra_pro  
+[ros2_astra_camera](https://github.com/orbbec/ros2_astra_camera.git)  
+SV1301S_U3  
 [OrbbecSDK_ROS2](https://github.com/orbbec/OrbbecSDK_ROS2.git)
 ### SLAM
 #### slam_toolbox
