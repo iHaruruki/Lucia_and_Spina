@@ -63,7 +63,7 @@ ros2 launch lucia_controller bringup.launch.py
 ```
 ### Run Navigation Nodes
 ```shell
-ros2 launch lucia_navigation2 navigation2.launch.py map:=/homr/<username>/ros2_ws/src/lucia_navigation2/map/map.yaml
+ros2 launch lucia_navigation2 navigation2.launch.py map:=/homr/<username>/ros2_ws/src/lucia_navigation2/map/map.yaml use_sim_time:=false
 ```
 #### Estimate Initia Pose
 1. Click the 2D Pose Estimate button in the RViz2 menu.
