@@ -26,6 +26,8 @@ SV1301S_U3
 ## Spina
 ### arm
 [spina_arm_controll](https://github.com/iHaruruki/spina_arm_controll.git)
+### kinematics
+[spina_inverse_kinematics](https://github.com/iHaruruki/spina_inverse_kinematics.git)
 ### vital
 #### vital measurement
 [lucia_vital](https://github.com/iHaruruki/lucia_vital.git)
