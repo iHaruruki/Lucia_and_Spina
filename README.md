@@ -84,7 +84,7 @@ ros2 run spina_arm_controll serial_controller_node
 ```
 ### Set the overall angle to +90°
 ```
-ros2 topic pub /angle_cmd std_msgs/msg/String "{ data: 'A0p+090' }" --once
+ros2 topic pub /angle_cmd std_msgs/msg/String "{ data: 'A0p-090' }" --once
 ```
 ## Lucia_vital_signs_display
 YARP sound generator
