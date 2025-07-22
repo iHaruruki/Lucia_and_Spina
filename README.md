@@ -39,6 +39,20 @@ SV1301S_U3
 [lucia_vital_signs_display](https://github.com/iHaruruki/lucia_vital_signs_display.git)
 
 # Command List
+## Manual Control
+### Launch Lucia's motor and LiDAR
+```shell
+ros2 launch lucia_controller bringup.launch.py
+```
+### Run Teleoperation Node
+```shell
+ros2 run teleop_twist_keyboard teleop_twist_keyboard 
+```
+### Joystick Control
+Connect the DUALSHOCK4 to your computer
+```shell
+
+```
 ## SLAM
 ### Launch Lucia's motor and LiDAR
 ```shell
