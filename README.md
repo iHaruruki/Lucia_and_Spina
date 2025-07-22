@@ -7,8 +7,9 @@ List of packages required to run Lucia
 #### Lucia URDF
 [lucia_description](https://github.com/iHaruruki/lucia_description.git)
 #### LiDAR
-[UTM-30LX-EW](https://www.hokuyo-aut.co.jp/search/single.php?serial=146#program)
-ROS2-pkg
+UTM-30LX-EW    
+[UTM-30LX-EW](https://www.hokuyo-aut.co.jp/search/single.php?serial=146#program)    
+ROS2-pkg    
 [urg_node2](https://github.com/iHaruruki/urg_node2.git)
 ```shell
 $ cd ~/ros2_ws/src
