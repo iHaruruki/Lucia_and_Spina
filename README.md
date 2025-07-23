@@ -15,9 +15,9 @@ ROS2-pkg
 [dual_laser_merger](https://github.com/iHaruruki/dual_laser_merger.git)
 #### orbbec
 astra_pro  
-[ros2_astra_camera](https://github.com/orbbec/ros2_astra_camera.git)  
+[ros2_astra_camera](https://github.com/iHaruruki/ros2_astra_camera.git)  
 SV1301S_U3  
-[OrbbecSDK_ROS2](https://github.com/orbbec/OrbbecSDK_ROS2.git)
+[OrbbecSDK_ROS2](https://github.com/iHaruruki/OrbbecSDK_ROS2.git)
 ### SLAM
 #### slam_toolbox
 [lucia_slam_toolbox](https://github.com/iHaruruki/lucia_slam_toolbox.git)
