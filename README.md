@@ -4,6 +4,8 @@ List of packages required to run Lucia
 ### Lucia Controller
 #### Motor & Encoder controller
 [lucia_controller](https://github.com/iHaruruki/lucia_controller.git)
+### Joy Stick Controller
+[joy_to_cmdvel](https://github.com/iHaruruki/joy_to_cmdvel.git)
 #### Lucia URDF
 [lucia_description](https://github.com/iHaruruki/lucia_description.git)
 #### LiDAR
@@ -53,7 +55,10 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ### Joystick Control
 Connect the DUALSHOCK4 to your computer
 ```shell
-
+ros2 run joy joy_node
+```
+```shell
+ros2 run joy_to_cmdvel joy_to_cmdvel_node
 ```
 ## SLAM
 ### Launch Lucia's motor and LiDAR
