@@ -16,9 +16,9 @@ ROS2-pkg
 ##### dual_laser_merger(ROS 2 Package to merge dual lidar scan data)
 [dual_laser_merger](https://github.com/iHaruruki/dual_laser_merger.git)
 ##### orbbec
-astra_pro  
+astra_pro(for Lucia)    
 [ros2_astra_camera](https://github.com/iHaruruki/ros2_astra_camera.git)  
-SV1301S_U3  
+astra_stereo_u3(for Mani)    
 [OrbbecSDK_ROS2](https://github.com/iHaruruki/OrbbecSDK_ROS2.git)
 #### SLAM
 ##### slam_toolbox
