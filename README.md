@@ -107,28 +107,28 @@ sudo chmod 777 /dev/ttyUSB0
 ros2 run spina_arm_controll serial_controller_node
 ```
 #### Set the overall angle to +90°
-```
+```shell
 ros2 topic pub /angle_cmd std_msgs/msg/String "{ data: 'A0p-090' }" --once
 ```
 ### Lucia_vital_signs_display
 YARP sound generator
-```
+```shell
 yarpmanager --application /home/robot/repos/robot/script/ymanager/xml/applications/tutorial/tutorial_audio_3.xml
 ```
 run arm controller node
-```
+```shell
 ros2 run spina_arm_controll serial_controller_node
 ```
 run vital controller node
-```
+```shell
 ros2 run lucia_vital vital_controller_node
 ```
 run vital audio guidance node
-```
+```shell
 ros2 run lucia_vital_signs_display vital_audio_guidance_node 
 ```
 #### goal announcement
-```
+```shell
 ros2 topic pub \
   /navigate_to_pose/_action/status \
   action_msgs/msg/GoalStatusArray \
