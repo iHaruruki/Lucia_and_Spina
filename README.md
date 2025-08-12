@@ -111,7 +111,7 @@ ros2 run spina_arm_controll serial_controller_node
 ros2 topic pub /angle_cmd std_msgs/msg/String "{ data: 'A0p-090' }" --once
 ```
 ### Lucia_vital_signs_display
-**System that provides feedback on vital sign measurement results through voice guidance**
+**System that provides feedback on vital sign measurement results through voice guidance**    
 YARP sound generator
 ```shell
 yarpmanager --application /home/robot/repos/robot/script/ymanager/xml/applications/tutorial/tutorial_audio_3.xml
