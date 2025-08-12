@@ -30,6 +30,7 @@ astra_stereo_u3(for Mani)
 #### MapStorage
 [MapStorage](https://github.com/iHaruruki/maps.git)
 ### Spina
+List of packages required to run Spina
 #### arm
 [spina_arm_controll](https://github.com/iHaruruki/spina_arm_controll.git)
 #### kinematics
