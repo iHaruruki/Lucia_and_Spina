@@ -36,7 +36,7 @@
 | Vital | | Vital Measurement | [lucia_vital](https://github.com/iHaruruki/lucia_vital) |
 | Vital | | Calibration | [lucia_vital_calibration](https://github.com/iHaruruki/lucia_vital_calibration) |
 | Vital | | Vital Measurement Feedback | [lucia_vital_signs_display](https://github.com/iHaruruki/lucia_vital_signs_display) |
-| Audio | | Audio Generator(JP) | [audio_generator](https://github.com/iHaruruki/audio_generator.git) |
+| Audio | | Audio Generator(JP) | [voicevox_tts_ros2](https://github.com/iHaruruki/voicevox_tts_ros2.git) |
 | Audio | | Audio Generator(EN) | [audio_generator_edge_tts](https://github.com/iHaruruki/audio_generator_edge_tts.git) |
 ---
 
