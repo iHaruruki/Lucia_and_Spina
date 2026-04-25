@@ -117,7 +117,7 @@ ros2 launch lucia_controller bringup.launch.py
 ### Run navigation2
 ```bash
 ros2 launch lucia_navigation2 navigation2.launch.py \
-  mmap:=$HOME/ros2_ws/src/lucia_navigation2/map/map_e3_c_r1.yaml \
+  map:=$HOME/ros2_ws/src/lucia_navigation2/map/map_e3_c_r1.yaml \
   use_sim_time:=false
 ```
 ### Initial Pose / ロボットの初期位置を設定する
