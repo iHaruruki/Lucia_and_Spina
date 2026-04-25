@@ -56,14 +56,10 @@ ros2 launch lucia_controller bringup.launch.py
 ```
 ### Control via keyboard
 ```bash
-ros2 run teleop_twist_keyboard teleop_twist_keyboard
-```
-### Control via Joystick
-```bash
-ros2 run joy joy_node
+ros2 launch lucia_controller keyboard_teleop.launch.py
 ```
 ```bash
-ros2 run joy_to_cmdvel joy_to_cmdvel_node
+ros2 launch lucia_controller joystick_teleop.launch.py
 ```
 ---
 
@@ -86,7 +82,7 @@ ros2 launch lucia_slam_toolbox online_async_launch.py
 ```
 ### Control via keyboard
 ```bash
-ros2 run teleop_twist_keyboard teleop_twist_keyboard
+ros2 launch lucia_controller keyboard_teleop.launch.py
 ```
 *Start exploring and drawing the map.*
 ![slam_toolbox](/media/slam_toolbox.gif)
