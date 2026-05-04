@@ -21,7 +21,6 @@
 | Domain | Device Name | Function | Repository |
 |--------|----------|---------------|------------|
 | Base | | Motor & Encoder Controller | [lucia_controller](https://github.com/iHaruruki/lucia_controller) |
-| Base | | Joystick to cmd_vel | [joy_to_cmdvel](https://github.com/iHaruruki/joy_to_cmdvel) |
 | Base | | URDF / Description | [lucia_description](https://github.com/iHaruruki/lucia_description) |
 | Sensing | UTM-30LX | LiDAR Driver | [urg_node2_setup](https://github.com/iHaruruki/urg_node2_setup.git) |
 | Sensing | |Dual LiDAR Merger | [dual_laser_merger](https://github.com/iHaruruki/dual_laser_merger) |
