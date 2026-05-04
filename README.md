@@ -90,7 +90,9 @@ ros2 launch lucia_controller keyboard_teleop.launch.py
 
 ### Save the map you created
 ```bash
-ros2 run nav2_map_server map_saver_cli -f ~/map
+ros2 run nav2_map_server map_saver_cli -f ~/ros2_ws/maps/map_test
+# If the `maps` directory does not exist　
+# mkdir -p ~/ros2_ws/maps
 ```
 > [!NOTE]
 > The -f option specifies a folder location and a file name where files to be saved.  
