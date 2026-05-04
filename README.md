@@ -58,6 +58,7 @@ ros2 launch lucia_controller bringup.launch.py
 ```bash
 ros2 launch lucia_controller keyboard_teleop.launch.py
 ```
+### Control via Joystick
 ```bash
 ros2 launch lucia_controller joystick_teleop.launch.py
 ```
@@ -78,7 +79,7 @@ ros2 launch lucia_controller bringup.launch.py
 ```
 ### Run slam_toolbox
 ```bash
-ros2 launch lucia_slam_toolbox online_async_launch.py
+ros2 launch lucia_slam_toolbox online_async.launch.py
 ```
 ### Control via keyboard
 ```bash
