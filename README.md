@@ -27,6 +27,7 @@
 | Sensing | |Dual LiDAR Merger | [dual_laser_merger](https://github.com/iHaruruki/dual_laser_merger) |
 | Sensing | Astra 2 | Depth Camera | [ros2_astra_camera_setup](https://github.com/iHaruruki/OrbbecSDK_ROS2_setup.git) |
 | Sensing | Astra Stereo S U3 | Depth Camera | [OrbbecSDK_ROS2_setup](https://github.com/iHaruruki/OrbbecSDK_ROS2_setup.git) |
+| Sensing | | FLIR C2 | Thermal camera | [flir_c2_ros2](https://github.com/iHaruruki/flir_c2_ros2.git) |
 | Sensing | Tatto | Touch Sensor | [tatto_pkg](https://github.com/iHaruruki/tatto_pkg.git) |
 | Mapping | | slam_toolbox | [lucia_slam_toolbox](https://github.com/iHaruruki/lucia_slam_toolbox) |
 | Mapping | | Cartographer | [lucia_cartographer](https://github.com/iHaruruki/lucia_cartographer) |
