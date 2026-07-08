@@ -54,7 +54,7 @@
 
 ### Startup control system and LiDAR 
 ```bash
-ros2 launch lucia_controller bringup.launch.py
+ros2 launch lucia_controller bringup.launch.py 
 ```
 ### Control via keyboard
 ```bash
@@ -64,6 +64,10 @@ ros2 launch lucia_controller keyboard_teleop.launch.py
 ```bash
 ros2 launch lucia_controller joystick_teleop.launch.py
 ```
+
+> [!TIP]
+> More information about the **lucia_controller** can be found in the following GitHub repository:  
+> [lucia_controller](https://github.com/iHaruruki/lucia_controller)
 ---
 
 ## 🗺️ B. SLAM (Map Building)
@@ -121,9 +125,9 @@ ros2 launch lucia_controller bringup.launch.py
 ```
 ### Run navigation2
 ```bash
-ros2 launch lucia_navigation2 navigation2.launch.py \
-  map:=$HOME/ros2_ws/src/lucia_navigation2/map/map_d2_s_lound_r1.yaml \
-  params_file:=$HOME/ros2_ws/src/lucia_navigation2/param/lucia_holonomic.yaml \
+ros2 launch lucia_navigation2 bringup.launch.py \
+  map:=$HOME/ros2_ws/src/lucia_navigation2/map/map.yaml \
+  params_file:=$HOME/ros2_ws/src/lucia_navigation2/param/lucia.yaml \
   use_sim_time:=false
 ```
 ### Initial Pose / ロボットの初期位置を設定する
