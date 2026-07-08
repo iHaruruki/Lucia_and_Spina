@@ -27,6 +27,7 @@
 | Sensing | |Dual LiDAR Merger | [dual_laser_merger](https://github.com/iHaruruki/dual_laser_merger) |
 | Sensing | Astra 2 | Depth Camera | [ros2_astra_camera_setup](https://github.com/iHaruruki/OrbbecSDK_ROS2_setup.git) |
 | Sensing | Astra Stereo S U3 | Depth Camera | [OrbbecSDK_ROS2_setup](https://github.com/iHaruruki/OrbbecSDK_ROS2_setup.git) |
+| Sensing | Tatto | Touch Sensor | [tatto_pkg](https://github.com/iHaruruki/tatto_pkg.git) |
 | Mapping | | slam_toolbox | [lucia_slam_toolbox](https://github.com/iHaruruki/lucia_slam_toolbox) |
 | Mapping | | Cartographer | [lucia_cartographer](https://github.com/iHaruruki/lucia_cartographer) |
 | Navigation | |  Navigation2 | [lucia_navigation2](https://github.com/iHaruruki/lucia_navigation2) |
@@ -34,7 +35,6 @@
 | Arm | | Arm Serial Control | [spina_arm_controll](https://github.com/iHaruruki/spina_arm_controll) |
 | Arm | | Inverse Kinematics | [spina_inverse_kinematics](https://github.com/iHaruruki/spina_inverse_kinematics) |
 | Vital | | Vital Measurement | [lucia_vital](https://github.com/iHaruruki/lucia_vital) |
-| Vital | | Calibration | [lucia_vital_calibration](https://github.com/iHaruruki/lucia_vital_calibration) |
 | Vital | | Vital Measurement Feedback | [lucia_vital_signs_display](https://github.com/iHaruruki/lucia_vital_signs_display) |
 | Audio | | capture, stream, and play back audio | [audio_common](https://github.com/iHaruruki/audio_common.git)
 | Audio | | Text to Speech(JP) | [voicevox_tts_ros2](https://github.com/iHaruruki/voicevox_tts_ros2.git) |
