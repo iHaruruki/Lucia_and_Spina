@@ -48,21 +48,19 @@
 
 ## Lucia電源
 
-
-
----
-
-# Lucia have 3 mode
-
-## :video_game: A. Manual Control mode
-
-### Startup Lucia's power supply and connect Wi-Fi
+## ネットワーク設定
 
 1. Turn on Lucia's main power / Luciaの主電源を入れる   
 2. Launch `Lucia-04-Green-01-Main` in YARP mode / `Lucia-04-Green-01-Main`を起動  
 3. Connect NUC38 to SSID(`lucia-g-router2-5G`) / NUC38をSSID(`lucia-g-router2-5G`)に接続する  
 4. Release the emergency stop button / 非常停止ボタンを解除する
 5. Change YARP mode to `Remote` mode / YARPのモードを[Remote] モードに変更
+
+---
+
+# Lucia have 3 mode
+
+## :video_game: A. Manual Control mode
 
 ### Startup control system and LiDAR 
 ```bash
@@ -83,14 +81,6 @@ ros2 launch lucia_controller joystick_teleop.launch.py
 ---
 
 ## 🗺️ B. SLAM (Map Building)
-
-### Startup Lucia's power supply and connect Wi-Fi
-
-1. Turn on Lucia's main power / Luciaの主電源を入れる   
-2. Launch `Lucia-04-Green-01-Main` in YARP mode / `Lucia-04-Green-01-Main`を起動  
-3. Connect NUC38 to SSID(`lucia-g-router2-5G`) / NUC38をSSID(`lucia-g-router2-5G`)に接続する 
-4. Release the emergency stop button / 非常停止ボタンを解除する 
-5. Change YARP mode to `Remote` mode / YARPのモードを[Remote] モードに変更
   
 ### Startup control system and LiDAR
 
@@ -130,14 +120,6 @@ ros2 run nav2_map_server map_saver_cli -f ~/ros2_ws/maps/map_test
 ---
 
 ## 🧭 C. Navigation (Using Saved Map)
-
-### Startup Lucia's power supply and connect Wi-Fi
-
-1. Turn on Lucia's main power / Luciaの主電源を入れる   
-2. Launch `Lucia-04-Green-01-Main` in YARP mode / `Lucia-04-Green-01-Main`を起動  
-3. Connect NUC38 to SSID(`lucia-g-router2-5G`) / NUC38をSSID(`lucia-g-router2-5G`)に接続する  
-4. Release the emergency stop button / 非常停止ボタンを解除する
-5. Change YARP mode to `Remote` mode / YARPのモードを[Remote] モードに変更
   
 ### Startup control system and LiDAR
 
