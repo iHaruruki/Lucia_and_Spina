@@ -47,14 +47,28 @@
 # 事前準備
 
 ## Lucia電源
+Luciaはバッテリーモードと外部電源モードの2種類の電源供給方法がある  
+
+### バッテリーモード
+
+Luciaの主電源を入れる 
+
+### 外部電源モード
+
+Luciaの主電源を入れる 
+
+## NUC39 & NUC40への電源供給
+
 
 ## ネットワーク設定
+1. NUC39 & NUC41にLANケーブルを接続する
+2. NUC25 & NUC39 & NUC41をSSID(`deco_d2`)に接続する（Wi-Fi接続）
 
-1. Turn on Lucia's main power / Luciaの主電源を入れる   
-2. Launch `Lucia-04-Green-01-Main` in YARP mode / `Lucia-04-Green-01-Main`を起動  
-3. Connect NUC38 to SSID(`lucia-g-router2-5G`) / NUC38をSSID(`lucia-g-router2-5G`)に接続する  
-4. Release the emergency stop button / 非常停止ボタンを解除する
-5. Change YARP mode to `Remote` mode / YARPのモードを[Remote] モードに変更
+## YARP起動
+1. NUC21を起動する
+2. YARPモジュールの`Lucia-04-Green-01-Main`を起動  
+3. 非常停止ボタンを解除する
+4. モードを[Remote] モードに変更
 
 ---
 
@@ -83,6 +97,7 @@ ros2 launch lucia_controller joystick_teleop.launch.py
 ### Control via Remote Joystick
 ```bash
 # NUC 25
+ros2 launch lucia_controller makuhari_joystick_teleop.launch.py
 ```
 
 > [!TIP]
@@ -95,19 +110,33 @@ ros2 launch lucia_controller joystick_teleop.launch.py
 ### Startup control system and LiDAR
 
 ```bash
+# NUC39
 ros2 launch lucia_controller bringup.launch.py
+```
+
+### Startip Depth camera & Web camera
+Astra2
+```bash
+# NUC41
+ros2 launch lucia_controller astra2.launch.py
+```
+Brio 100
+```bash
+# NUC39
+ros2 launch lucia_controller brio_100.launch.py
 ```
 
 ### Run slam_toolbox
 
 ```bash
+# NUC25
 ros2 launch lucia_slam_toolbox online_async.launch.py
 ```
 
-### Control via keyboard
-
+### Control via Joystick
 ```bash
-ros2 launch lucia_controller keyboard_teleop.launch.py
+# NUC39
+ros2 launch lucia_controller joystick_teleop.launch.py
 ```
 *Start exploring and drawing the map.*
 ![slam_toolbox](/media/slam_toolbox.gif)
@@ -115,10 +144,18 @@ ros2 launch lucia_controller keyboard_teleop.launch.py
 ### Save the map you created
 
 ```bash
-ros2 run nav2_map_server map_saver_cli -f ~/ros2_ws/maps/map_test
+# NUC25
+cd ~/ros2_ws/maps
+ros2 run nav2_map_server map_saver_cli -f ~/ros2_ws/maps/map_01
 # If the `maps` directory does not exist　
 # mkdir -p ~/ros2_ws/maps
 ```
+保存した地図を確認する
+```bash
+# NUC25
+eog ~/ros2_ws/maps/map_01/map_01.pgm
+```
+
 > [!NOTE]
 > The -f option specifies a folder location and a file name where files to be saved.  
 > With the above command, map.pgm and map.yaml will be saved in the home folder `~/(/home/${username})`.
@@ -132,16 +169,28 @@ ros2 run nav2_map_server map_saver_cli -f ~/ros2_ws/maps/map_test
 ## 🧭 C. Navigation (Using Saved Map)
   
 ### Startup control system and LiDAR
-
 ```bash
+# NUC39
 ros2 launch lucia_controller bringup.launch.py
 ```
 
-### Run navigation2
-
+### Startip Depth camera & Web camera
+Astra2
 ```bash
+# NUC41
+ros2 launch lucia_controller astra2.launch.py
+```
+Brio 100
+```bash
+# NUC39
+ros2 launch lucia_controller brio_100.launch.py
+```
+
+### Run navigation2
+```bash
+# NUC25
 ros2 launch lucia_navigation2 bringup.launch.py \
-  map:=$HOME/ros2_ws/src/lucia_navigation2/map/map.yaml \
+  map:=$HOME/ros2_ws/maps/map_01
 ```
 
 ### Initial Pose / ロボットの初期位置を設定する
