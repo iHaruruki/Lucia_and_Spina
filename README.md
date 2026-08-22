@@ -64,15 +64,25 @@
 
 ### Startup control system and LiDAR 
 ```bash
+# NUC39
 ros2 launch lucia_controller bringup.launch.py 
 ```
+
 ### Control via keyboard
 ```bash
+# NUC39
 ros2 launch lucia_controller keyboard_teleop.launch.py
 ```
+
 ### Control via Joystick
 ```bash
+# NUC39
 ros2 launch lucia_controller joystick_teleop.launch.py
+```
+
+### Control via Remote Joystick
+```bash
+# NUC 25
 ```
 
 > [!TIP]
