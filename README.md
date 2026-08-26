@@ -138,6 +138,18 @@ ros2 launch lucia_slam_toolbox online_async.launch.py
 # NUC39
 ros2 launch lucia_controller joystick_teleop.launch.py
 ```
+### rosbag / カメラ画像を録画する
+<!-- ```bash
+#NUC39
+cd ~/ros2_ws/rosbag
+ros2 bag record --topics /camera/color/camera_info /camera/color/image_raw/compressed /camera/depth/camera_info /camera/depth/image_raw/compressedDepth /tf /tf_static /joint_states ⁠/camera/accel/imu_info ⁠/camera/accel/sample ⁠/camera/gyro/info ⁠/camera/gyro/sample ⁠/camera/gyro_accel/sample
+``` -->
+```bash
+#NUC39
+cd ~/ros2_ws/rosbag
+ros2 bag record -a --exclude-topics /camera/color/image_raw /camera/color/image_raw/theora /camera/depth/image_raw /camera/depth/image_raw/theora /camera/depth/image_unaligned /image_unaligned/compressedDepth /camera/depth/image_unaligned/theora /camera/depth/image_unaligned/zstd /camera/depth/points /camera/ir/image_raw
+```
+
 *Start exploring and drawing the map.*
 ![slam_toolbox](/media/slam_toolbox.gif)
 
