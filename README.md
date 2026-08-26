@@ -129,7 +129,7 @@ ros2 launch lucia_controller brio_100.launch.py
 ### Run slam_toolbox
 
 ```bash
-# NUC25
+# NUC39
 ros2 launch lucia_slam_toolbox online_async.launch.py
 ```
 
@@ -150,13 +150,20 @@ cd ~/ros2_ws/rosbag
 ros2 bag record -a --exclude-topics /camera/color/image_raw /camera/color/image_raw/theora /camera/depth/image_raw /camera/depth/image_raw/theora /camera/depth/image_unaligned /image_unaligned/compressedDepth /camera/depth/image_unaligned/theora /camera/depth/image_unaligned/zstd /camera/depth/points /camera/ir/image_raw
 ```
 
+NUC39とモニタを切り離す（HDMIを外す）
+
+```bash
+#NUC25
+rviz2 -d ~/ros2_ws/src/lucia_slam_toolbox/rviz/lucia_slam_toolbox.rviz
+```
+
 *Start exploring and drawing the map.*
 ![slam_toolbox](/media/slam_toolbox.gif)
 
 ### Save the map you created
 
 ```bash
-# NUC25
+# NUC39
 cd ~/ros2_ws/maps
 ros2 run nav2_map_server map_saver_cli -f ~/ros2_ws/maps/map_01
 # If the `maps` directory does not exist　
@@ -164,7 +171,7 @@ ros2 run nav2_map_server map_saver_cli -f ~/ros2_ws/maps/map_01
 ```
 保存した地図を確認する
 ```bash
-# NUC25
+# NUC39
 eog ~/ros2_ws/maps/map_01/map_01.pgm
 ```
 
@@ -197,12 +204,29 @@ Brio 100
 # NUC39
 ros2 launch lucia_controller brio_100.launch.py
 ```
-
+### rosbag / カメラ画像を録画する
+<!-- ```bash
+#NUC39
+cd ~/ros2_ws/rosbag
+ros2 bag record --topics /camera/color/camera_info /camera/color/image_raw/compressed /camera/depth/camera_info /camera/depth/image_raw/compressedDepth /tf /tf_static /joint_states ⁠/camera/accel/imu_info ⁠/camera/accel/sample ⁠/camera/gyro/info ⁠/camera/gyro/sample ⁠/camera/gyro_accel/sample
+``` -->
+```bash
+#NUC39
+cd ~/ros2_ws/rosbag
+ros2 bag record -a --exclude-topics /camera/color/image_raw /camera/color/image_raw/theora /camera/depth/image_raw /camera/depth/image_raw/theora /camera/depth/image_unaligned /image_unaligned/compressedDepth /camera/depth/image_unaligned/theora /camera/depth/image_unaligned/zstd /camera/depth/points /camera/ir/image_raw
+```
 ### Run navigation2
 ```bash
-# NUC25
+# NUC39
 ros2 launch lucia_navigation2 bringup.launch.py \
   map:=$HOME/ros2_ws/maps/map_01
+```
+
+NUC39とモニタを切り離す（HDMIを外す）
+
+```bash
+#NUC25
+rviz2 -d ~/ros2_ws/src/lucia_navigation2/rviz/lucia_rviz.rviz
 ```
 
 ### Initial Pose / ロボットの初期位置を設定する
