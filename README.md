@@ -250,6 +250,82 @@ rviz2 -d ~/ros2_ws/src/lucia_navigation2/rviz/lucia_rviz.rviz
 > ![lucia_waypoint_follow_mode](/media/lucia_waypoint_follow.gif)
 ---
 
+## rosbag
+```bash
+# slam toolbox
+/brio_100/camera_info
+/brio_100/image_raw
+/brio_100/image_raw/compressed
+/brio_100/image_raw/compressedDepth
+/brio_100/image_raw/theora
+/camera/accel/imu_info
+/camera/color/camera_info
+/camera/color/image_raw
+/camera/color/image_raw/compressed
+/camera/depth/camera_info
+/camera/depth/image_raw
+/camera/depth/image_raw/compressed
+/camera/depth/image_raw/compressedDepth
+/camera/depth/image_raw/ffmpeg
+/camera/depth/image_raw/theora
+/camera/depth/image_raw/zstd
+/camera/depth/points
+/camera/depth_filters/status
+/camera/depth_registered/points
+/camera/device_status
+/camera/gyro/imu_info
+/camera/gyro_accel/sample
+/camera/ir/camera_info
+/camera/ir/image_raw
+/camera/ir/image_raw/compressed
+/camera/ir/image_raw/compressedDepth
+/camera/ir/image_raw/ffmpeg
+/camera/ir/image_raw/theora
+/camera/ir/image_raw/zstd
+/clicked_point
+/collision_monitor/cmd_vel
+/diagnostics
+/events/read_split
+/events/write_split
+/image_raw/zstd
+/initialpose
+/intervention_status
+/joint_states
+/joy
+/joy_vel
+/laser1/echoes
+/laser1/first
+/laser1/last
+/laser1/most_intense
+/laser1/urg_node2_1st/transition_event
+/laser2/echoes
+/laser2/first
+/laser2/last
+/laser2/most_intense
+/laser2/urg_node2_2nd/transition_event
+/lucia_controller/trajectory
+/map
+/map_metadata
+/map_updates
+/merged_cloud
+/move_base_simple/goal
+/odom
+/parameter_events
+/pose
+/reject_nav_vel
+/robot_description
+/rosout
+/scan
+/slam_toolbox/graph_visualization
+/slam_toolbox/scan_visualization
+/slam_toolbox/transition_event
+/slam_toolbox/update
+/smoothed_cmd_vel
+/tf
+/tf_static
+/twist_mux/cmd_vel
+```
+
 <!-- ## Spina Arm Control & Vital Signs Display System
 
 ### 🦾 Spina Arm Control
