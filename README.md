@@ -160,6 +160,12 @@ rviz2 -d ~/ros2_ws/src/lucia_slam_toolbox/rviz/lucia_slam_toolbox.rviz
 *Start exploring and drawing the map.*
 ![slam_toolbox](/media/slam_toolbox.gif)
 
+### rosbag
+```bash
+#NUC39
+ros2 bag record -a --exclude-topics /brio_100/image_raw /brio_100/image_raw/compressedDepth /brio_100/image_raw/theora /camera/color/image_raw /camera/depth/image_raw /camera/depth/image_raw/compressed /camera/depth/image_raw/ffmpeg /camera/depth/image_raw/theora /camera/depth/image_raw/zstd /camera/depth/points /camera/depth_registered/points /camera/ir/image_raw /camera/ir/image_raw/compressedDepth /camera/ir/image_raw/ffmpeg /camera/ir/image_raw/theora /camera/ir/image_raw/zstd /image_raw/zstd
+```
+
 ### Save the map you created
 
 ```bash
@@ -227,6 +233,12 @@ NUC39とモニタを切り離す（HDMIを外す）
 ```bash
 #NUC25
 rviz2 -d ~/ros2_ws/src/lucia_navigation2/rviz/lucia_rviz.rviz
+```
+
+### rosbag
+```bash
+#NUC39
+ros2 bag record -a --exclude-topics /brio_100/image_raw /brio_100/image_raw/compressedDepth /brio_100/image_raw/theora /camera/color/image_raw /camera/depth/image_raw /camera/depth/image_raw/compressed /camera/depth/image_raw/ffmpeg /camera/depth/image_raw/theora /camera/depth/image_raw/zstd /camera/depth/points /camera/depth_registered/points /camera/ir/image_raw /camera/ir/image_raw/compressedDepth /camera/ir/image_raw/ffmpeg /camera/ir/image_raw/theora /camera/ir/image_raw/zstd /image_raw/zstd
 ```
 
 ### Initial Pose / ロボットの初期位置を設定する
