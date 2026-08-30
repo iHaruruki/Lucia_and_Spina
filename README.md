@@ -147,7 +147,7 @@ ros2 bag record --topics /camera/color/camera_info /camera/color/image_raw/compr
 ```bash
 #NUC39
 cd ~/ros2_ws/rosbag
-ros2 bag record -a --exclude-topics /camera/color/image_raw /camera/color/image_raw/theora /camera/depth/image_raw /camera/depth/image_raw/theora /camera/depth/image_unaligned /camera/depth/image_raw/zstd /camera/ir/image_raw /camera/ir/image_raw/compressedDepth /camera/ir/image_raw/ffmpeg /camera/ir/image_raw/theora /image_unaligned/compressedDepth /camera/depth/image_unaligned/theora /camera/depth/image_unaligned/zstd /camera/depth/points /camera/ir/image_raw /camera/ir/image_raw/zstd /brio_100/image_raw /brio_100/image_raw/compressedDepth /brio_100/image_raw/ffmpeg /brio_100/image_raw/theora /image_raw/zstd /merged_cloud
+ros2 bag record -a --exclude-topics /camera/color/image_raw /camera/color/image_raw/theora /camera/depth/image_raw /camera/depth/image_raw/compressed /camera/depth/image_raw/ffmpeg /camera/depth/image_raw/theora /camera/depth/image_unaligned /camera/depth/image_raw/zstd /camera/ir/image_raw /camera/ir/image_raw/compressedDepth /camera/ir/image_raw/ffmpeg /camera/ir/image_raw/theora /image_unaligned/compressedDepth /camera/depth/image_unaligned/theora /camera/depth/image_unaligned/zstd /camera/depth/points /camera/ir/image_raw /camera/ir/image_raw/zstd /brio_100/image_raw /brio_100/image_raw/compressedDepth /brio_100/image_raw/ffmpeg /brio_100/image_raw/theora /image_raw/zstd /merged_cloud
 ```
 
 NUC39とモニタを切り離す（HDMIを外す）
@@ -213,14 +213,14 @@ ros2 bag record --topics /camera/color/camera_info /camera/color/image_raw/compr
 ```bash
 #NUC39
 cd ~/ros2_ws/rosbag
-ros2 bag record -a --exclude-topics /camera/color/image_raw /camera/color/image_raw/theora /camera/depth/image_raw /camera/depth/image_raw/theora /camera/depth/image_unaligned /camera/depth/image_raw/zstd /camera/ir/image_raw /camera/ir/image_raw/compressedDepth /camera/ir/image_raw/ffmpeg /camera/ir/image_raw/theora /image_unaligned/compressedDepth /camera/depth/image_unaligned/theora /camera/depth/image_unaligned/zstd /camera/depth/points /camera/ir/image_raw /camera/ir/image_raw/zstd /brio_100/image_raw /brio_100/image_raw/compressedDepth /brio_100/image_raw/ffmpeg /brio_100/image_raw/theora /image_raw/zstd /merged_cloud
+ros2 bag record -a --exclude-topics /camera/color/image_raw /camera/color/image_raw/theora /camera/depth/image_raw /camera/depth/image_raw/compressed /camera/depth/image_raw/ffmpeg /camera/depth/image_raw/theora /camera/depth/image_unaligned /camera/depth/image_raw/zstd /camera/ir/image_raw /camera/ir/image_raw/compressedDepth /camera/ir/image_raw/ffmpeg /camera/ir/image_raw/theora /image_unaligned/compressedDepth /camera/depth/image_unaligned/theora /camera/depth/image_unaligned/zstd /camera/depth/points /camera/ir/image_raw /camera/ir/image_raw/zstd /brio_100/image_raw /brio_100/image_raw/compressedDepth /brio_100/image_raw/ffmpeg /brio_100/image_raw/theora /image_raw/zstd /merged_cloud
 ```
 
 ### Run navigation2
 ```bash
 # NUC39
-ros2 launch lucia_navigation2 bringup.launch.py \
-  map:=$HOME/ros2_ws/maps/map_01
+ros2 launch lucia_navigation2 bringup.launch.py 
+map:=$HOME/ros2_ws/maps/map_01 params_file:=$HOME/ros2_ws/src/lucia_navigation2/params/lucia_differential.yaml
 ```
 
 NUC39とモニタを切り離す（HDMIを外す）
